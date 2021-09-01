@@ -43,15 +43,15 @@ export default function Home() {
                         websites
                     </h1>
 
-                    <button
-                        type="button"
-                        aria-label="button"
-                        className={styles.btn_wrap}
-                        onClick={() => {
-                            about.current.scrollIntoView();
-                        }}
-                    >
-                        <div className={styles.btn_arrow}>
+                    <div className={styles.btn_wrap}>
+                        <button
+                            className={styles.btn_main}
+                            type="button"
+                            aria-label="button"
+                            onClick={() => {
+                                about.current.scrollIntoView();
+                            }}
+                        >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="16"
@@ -67,9 +67,9 @@ export default function Home() {
                                     <path opacity=".25" d="M0 1l8 4 8-4" />
                                 </g>
                             </svg>
-                        </div>
+                        </button>
                         <p>ABOUT ME</p>
-                    </button>
+                    </div>
                 </div>
             </main>
             <section

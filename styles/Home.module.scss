@@ -47,14 +47,12 @@
     align-items: center;
     background-color: var(--DarkBlue);
     transition: 0.3s all ease-in-out;
-    border: none;
+
     &:hover {
         background-color: var(--SlightlyDesaturatedCyan);
         cursor: pointer;
     }
-    &:focus {
-        outline: max(1px, 0.2em) solid var(--DarkBlue);
-    }
+
     p {
         font-family: "public";
         font-weight: 400;
@@ -63,14 +61,19 @@
         color: var(--VeryLightGrey);
     }
 }
-.btn_arrow {
+
+.btn_main {
+    position: relative;
+    border: none;
     background-color: hsla(0, 0%, 0%, 0.1);
     width: 48px;
     height: 48px;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    &:hover {
+        cursor: pointer;
+    }
+    &:focus {
+        outline: max(1px, 0.2em) solid var(--DarkBlue);
+    }
 }
 .section_aboutme {
     width: 100%;
