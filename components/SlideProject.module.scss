@@ -1,0 +1,134 @@
+@import "../styles/variables.scss";
+
+.embla__slide {
+    position: relative;
+    flex: 0 0 100%;
+    padding-left: 32px;
+    padding-right: 32px;
+    @media screen and(min-width:$tablet) {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    @media screen and(min-width:$desktop) {
+        padding: 0;
+        flex: 0 0 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    picture,
+    img {
+        width: 100%;
+    }
+}
+.wrap {
+    margin-top: 40px;
+
+    @media screen and(min-width:$desktop) {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 30% 57%;
+        justify-content: space-between;
+        margin-top: 115px;
+    }
+}
+
+.intro {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    @media screen and(min-width:$tablet) {
+        display: block;
+        padding-top: 32px;
+        padding-bottom: 32px;
+        position: relative;
+    }
+    @media screen and(min-width:$desktop) {
+        padding-top: 48px;
+        padding-bottom: 48px;
+    }
+    &::after {
+        content: "";
+        width: 100%;
+        height: 1px;
+        background-color: var(--GreyishDarkBlue);
+        opacity: 0.15;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+
+    &::before {
+        content: "";
+        width: 100%;
+        height: 1px;
+        background-color: var(--GreyishDarkBlue);
+        opacity: 0.15;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    h2 {
+        margin-bottom: 24px;
+        @media screen and(min-width:$tablet) {
+            margin-bottom: 0;
+        }
+    }
+    p {
+        font-size: 1rem;
+    }
+}
+.description {
+    @media screen and(min-width:$tablet) {
+        width: 45%;
+        position: absolute;
+        top: 32px;
+        right: 0;
+    }
+    @media screen and(min-width:$desktop) {
+        position: initial;
+        width: 100%;
+    }
+}
+.details {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    @media screen and(min-width:$tablet) {
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+    @media screen and(min-width:$desktop) {
+        margin-top: 23px;
+        margin-bottom: 32px;
+    }
+    p {
+        font-family: "public";
+        font-weight: 700;
+        font-size: 1.07rem; /*16px*/
+        color: var(--SlightlyDesaturatedCyan);
+    }
+}
+
+.project_info {
+    margin-top: 48px;
+    margin-bottom: 64px;
+    @media screen and(min-width:$tablet) {
+        margin-top: 40px;
+        margin-bottom: 80px;
+    }
+    @media screen and(min-width:$desktop) {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    p {
+        margin-top: 28px;
+        margin-bottom: 40px;
+    }
+    picture,
+    img {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        @media screen and(min-width:$desktop) {
+            height: auto;
+        }
+    }
+}

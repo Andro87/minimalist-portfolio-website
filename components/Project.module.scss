@@ -1,0 +1,99 @@
+@import "../styles/variables.scss";
+
+.project_container {
+    width: 100%;
+    padding-left: 32px;
+    padding-right: 32px;
+    margin-bottom: 72px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    @media screen and (min-width: $tablet) {
+        padding-left: 40px;
+        padding-right: 40px;
+        margin-bottom: 80px;
+        display: grid;
+        grid-template-columns: 48% 48%;
+        justify-content: space-between;
+        align-items: center;
+    }
+    @media screen and (min-width: $desktop) {
+        width: 80%;
+        padding: 0;
+        margin-bottom: 70px;
+        grid-template-columns: 50% 50%;
+    }
+    picture,
+    img {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        @media screen and (min-width: $tablet) {
+            display: initial;
+            height: auto;
+        }
+        @media screen and (min-width: $desktop) {
+            height: 100%;
+        }
+    }
+}
+
+.project_info {
+    position: relative;
+    padding: 25px 0;
+    margin-top: 32px;
+    @media screen and (min-width: $tablet) {
+        margin-top: 0;
+        padding-top: 32px;
+        padding-bottom: 50px;
+        direction: ltr;
+    }
+    @media screen and (min-width: $desktop) {
+        padding-top: 105px;
+        padding-bottom: 105px;
+        height: 100%;
+        width: 73%;
+        margin: auto;
+    }
+
+    &::after {
+        content: "";
+        width: 100%;
+        height: 1px;
+        background-color: var(--GreyishDarkBlue);
+        opacity: 0.15;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+
+    &::before {
+        content: "";
+        width: 100%;
+        height: 1px;
+        background-color: var(--GreyishDarkBlue);
+        opacity: 0.15;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    p {
+        font-size: 1rem;
+        margin-top: 24px;
+        margin-bottom: 24px;
+        @media screen and (min-width: $tablet) {
+            margin-top: 29px;
+            margin-bottom: 35px;
+        }
+
+        @media screen and (min-width: $desktop) {
+            margin-top: 28px;
+            margin-bottom: 24px;
+        }
+    }
+}
+.direction {
+    @media screen and (min-width: $tablet) {
+        direction: rtl;
+    }
+}

@@ -1,0 +1,173 @@
+@import "./variables.scss";
+
+.main_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contact_intro {
+    width: 100%;
+    padding: 24px 32px 32px;
+    position: relative;
+
+    @media screen and (min-width: $tablet) {
+        padding: 32px 40px;
+    }
+    @media screen and (min-width: $desktop) {
+        padding: 48px 0;
+        width: 80%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    p {
+        font-size: 1rem;
+        margin-top: 24px;
+        margin-bottom: 24px;
+        @media screen and (min-width: $desktop) {
+            margin-top: 0;
+        }
+    }
+
+    &::after {
+        content: "";
+        width: 87%;
+        height: 1px;
+        background-color: var(--GreyishDarkBlue);
+        opacity: 0.15;
+        position: absolute;
+        bottom: 0;
+        margin: auto;
+        @media screen and (min-width: $desktop) {
+            width: 100%;
+        }
+    }
+
+    &::before {
+        content: "";
+        width: 87%;
+        height: 1px;
+        background-color: var(--GreyishDarkBlue);
+        opacity: 0.15;
+        position: absolute;
+        top: 0;
+        margin: auto;
+        @media screen and (min-width: $desktop) {
+            width: 100%;
+        }
+    }
+}
+
+.link_wrap {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    svg {
+        &:hover {
+            cursor: pointer;
+            path {
+                fill: var(--SlightlyDesaturatedCyan);
+                transition: 0.3s all ease-in-out;
+            }
+        }
+    }
+    @media screen and (min-width: $tablet) {
+        width: 20%;
+    }
+}
+.container_form {
+    width: 100%;
+    padding: 24px 32px 80px;
+    @media screen and (min-width: $tablet) {
+        padding: 32px 40px 96px;
+    }
+    @media screen and (min-width: $desktop) {
+        padding: 47px 0 108px;
+        width: 80%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    label {
+        color: var(--GreyishDarkBlue);
+        font-family: "public";
+        font-weight: 700;
+        font-size: 0.87rem;
+    }
+    ::placeholder {
+        color: var(--GreyishDarkBlue);
+        font-family: "public";
+        font-weight: 400;
+        font-size: 0.87rem;
+        opacity: 0.4;
+    }
+}
+
+.input {
+    background-color: hsla(245, 10%, 22%, 0.1);
+    padding: 16px;
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 24px;
+    border: none;
+    color: var(--GreyishDarkBlue);
+    font-family: "public";
+    font-weight: 400;
+    font-size: 0.87rem;
+    &:focus {
+        outline: max(1px, 0.2em) solid var(--SlightlyDesaturatedCyan);
+    }
+}
+.alert {
+    border: 2px solid var(--BrightRed);
+}
+
+.text_message {
+    background-color: hsla(245, 10%, 22%, 0.1);
+    padding: 16px;
+    position: relative;
+    margin-top: 10px;
+    height: 200px;
+    margin-bottom: 24px;
+    border: none;
+    color: var(--GreyishDarkBlue);
+    font-family: "public";
+    font-weight: 400;
+    font-size: 0.87rem;
+
+    &:focus {
+        outline: max(1px, 0.2em) solid var(--SlightlyDesaturatedCyan);
+    }
+}
+.contact_btn {
+    border: 1px solid var(--DarkBlue);
+    background-color: var(--DarkBlue);
+    padding: 17px 24px;
+    color: var(--GreyishDarkBlue);
+    font-family: "public";
+    font-weight: 400;
+    font-size: 0.8rem;
+    color: var(--VeryLightGrey);
+    width: 200px;
+    transition: 0.3s all ease-in-out;
+    &:hover {
+        color: var(--DarkBlue);
+        background-color: var(--VeryLightGrey);
+        cursor: pointer;
+    }
+    &:focus {
+        outline: max(1px, 0.2em) solid var(--GreyishDarkBlue);
+    }
+}
+.error_message {
+    color: var(--BrightRed);
+    position: relative;
+    bottom: 20px;
+    font-family: "public";
+    font-weight: 700;
+    font-size: 0.7rem;
+}
